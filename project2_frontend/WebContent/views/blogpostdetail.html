@@ -1,0 +1,23 @@
+<div class="row">
+<div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div>{{blogPost.blogTitle}}</div>
+<span><strong>Create By </strong>{{blogPost.postedBy.username}}</span>
+<span><strong>On </strong>{{blogPost.postedOn | date:'medium'}}</span>
+</div>
+<div class="panel-body">
+{{blogPost.description}}</div></div></div></div>
+<form>
+{{error.message}}
+<textarea rows="5" cols="20" ng-model="blogComment.commentText"></textarea>
+<input type="submit" ng-click="addComment()">
+</form>
+<a ng-click="getComments()">Show Comments</a><br>
+
+<ul ng-show="showcomments">
+<li ng-repeat="blogComment in blogComments" style="list-style : none">
+<span>{{blogComment.commentText}}</span>
+<span><strong>Commented By</strong>{{blogComment.commentedBy.username}}</span>
+<span><strong>Commented on</strong>{{blogComment.commentedOn | date : 'MM/dd/yyyy'}}</span>
+</li></ul>
