@@ -15,6 +15,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name="blogpost_batch4")
 
+
 public class BlogPost {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

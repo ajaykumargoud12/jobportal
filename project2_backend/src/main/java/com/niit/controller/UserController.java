@@ -1,3 +1,4 @@
+
 package com.niit.controller;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -96,12 +97,6 @@ private UserDao userDao;
 			
 		}
 	}
-	
-	
-		
-		
-	
-	
 	
 	
 }

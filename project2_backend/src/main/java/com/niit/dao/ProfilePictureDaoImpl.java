@@ -17,10 +17,14 @@ public class ProfilePictureDaoImpl implements ProfilePictureDao {
 	public void saveProfilePicture(ProfilePicture profilePicture) {
 		Session session=sessionFactory.getCurrentSession();
 		session.saveOrUpdate(profilePicture);
-			
-		}
-		
+	
 
 	}
 
+	public ProfilePicture getProfilePicture(String username) {
+		Session session=sessionFactory.getCurrentSession();
+		ProfilePicture profilePicture=(ProfilePicture)session.get(ProfilePicture.class, username);
+		return profilePicture;
+	}
 
+}
