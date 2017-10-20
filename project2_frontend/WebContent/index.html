@@ -13,7 +13,7 @@
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
 	rel="stylesheet" />
 <meta charset="ISO-8859-1">
-<title>Home</title>
+<title>Find Your Dream Job Here</title>
 </head>
 <body ng-app="ngApp">
 <header>
@@ -25,19 +25,27 @@
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        
       </button>
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">NIIT</a>
-                </div>
+      <strong>
+                <div class="navbar-header" backgroundcolor="green">
+                    
+                
 <div class="collapse navbar-collapse" id="collapse-example">
                 <ul class="nav navbar-nav ">
-                <li><a href="#/home">Home</a></li>
-                <li><a href="#/registration" ng-hide="currentUser.firstname">Sign Up</a></li>
-                <li><a href="#/login" ng-hide="currentUser.firstname">Sign in</a></li>
-                <li><a href="" ng-show="currentUser.firstname">Welcome {{currentUser.firstname}} {{currentUser.lastname}}</a></li>
-                <li><a href="#editprofile" ng-show="currentUser.firstname">Edit Profile</a></li>
-                <li><a href="#/uploadprofilepic"><img src="http://localhost:8090/project2_backend/getimage/{{currentUser.username}}" alt="Upload Profile Pic" height="30px" width="30px" class="img-rounded"></a></li>
+                
+                
+                <li><a href="#/home">Home </a></li>
+                <li class="dropdown"><a href="" class="dropdown-toggle"
+						data-toggle="dropdown" ng-hide="currentUser.firstname"> Login <b
+							class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/login" ng-hide="currentUser.firstname">Sign in</a></li>
+							<li><a href="#/registration" ng-hide="currentUser.firstname">Sign Up</a></li>
+						</ul></li>
+						
+				              <li><a href="#editprofile" ng-show="currentUser.firstname">Edit Profile</a></li>
+                <li><a href="#/uploadprofilepic" ng-show="currentUser.firstname"><img src="http://localhost:8090/project2_backend/getimage/{{currentUser.username}}" alt="Upload Profile Pic" height="50px" width="50px" ></a></li>
                 <li><a href="#/savejob" ng-show="currentUser.role=='ADMIN'">Add Job</a></li>
                 <li><a href="#/getalljobs" ng-show="currentUser.firstname">Get All Jobs </a></li>
                 <li class="dropdown"><a href="" class="dropdown-toggle"
@@ -47,6 +55,24 @@
 							<li><a href="#/saveblogpost">Add a Blog</a></li>
 							<li><a href="#/getallblogs">Get All Blogs</a></li>
 						</ul></li>
+						
+						
+						<li class="dropdown"><a href="" class="dropdown-toggle"
+						data-toggle="dropdown" ng-show="currentUser.username"> Friend <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/suggesteduserslist">List of Suggested Users</a></li>
+							<li><a href="#/pendingrequests">Pending Requests</a></li>
+							<li><a href="#/getfriends">Friends({{noOfFriends}})</a></li>
+							
+						</ul>
+						</li>	 
+						
+						 <li><a href="#/chat" ng-show="currentUser.username">chat </a></li>
+						 <script src="js/sockjs/sockjs.js"></script>
+   						 <script src="js/stomp/dist/stomp.js"></script>
+ 
+						
+						<li><a href="" ng-show="currentUser.firstname">Welcome {{currentUser.firstname}} {{currentUser.lastname}}</a></li>
                 <li><a href="" ng-click="logout()" ng-show="currentUser.firstname">Logout</a></li>
                 
                
@@ -56,6 +82,8 @@
 
 </div>
 </div>
+</div>
+</strong>
   
             </nav>
         </header>
@@ -76,6 +104,12 @@
 	<script type="text/javascript" src="controller/blogpostcontroller.js"></script>
 	<script type="text/javascript" src="service/blogpostservice.js"></script>
 	<script type="text/javascript" src="controller/blogpostdetailcontroller.js"></script>
+	<script type="text/javascript" src="controller/friendcontroller.js"></script>
+    <script type="text/javascript" src="service/friendservice.js"></script>
+    <script type="text/javascript" src="controller/frienddetailcontroller.js"></script>
+    <script type="text/javascript" src="controller/chatcontroller.js"></script>
+    <script type="text/javascript" src="service/chatservice.js"></script>
+    
 <link href="css.sample.css"/>
 </html>
 

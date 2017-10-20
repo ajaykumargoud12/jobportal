@@ -10,10 +10,10 @@ ngApp.factory('JobService',function($http){
 		return $http.post(BASE_URL + "/savejob",job)
 	}
 	jobService.getAllJobs=function(){
-		return $http.get("http://localhost:8090/project2_backend/getalljobs")
+		return $http.get(BASE_URL+"/getalljobs")
 	}
 	jobService.getJobDetails=function(id){
-	    return $http.get("http://localhost:8090/project2_backend/getjobbyid/"+id)
+	    return $http.get(BASE_URL+"/getjobbyid/"+id)
 }
 	return jobService;
 })

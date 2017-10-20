@@ -16,8 +16,9 @@
 <a ng-click="getComments()">Show Comments</a><br>
 
 <ul ng-show="showcomments">
+
 <li ng-repeat="blogComment in blogComments" style="list-style : none">
 <span>{{blogComment.commentText}}</span>
-<span><strong>Commented By</strong>{{blogComment.commentedBy.username}}</span>
-<span><strong>Commented on</strong>{{blogComment.commentedOn | date : 'MM/dd/yyyy'}}</span>
+<span><strong> Commented By</strong> {{blogComment.commentedBy.username}} </span>
+<span><strong> Commented on</strong> {{blogComment.commentedOn | date: 'MM/dd/yyyy' }} </span>
 </li></ul>
