@@ -4,7 +4,7 @@
 ngApp.controller('UserController',function($scope,$location,UserService,$rootScope,$cookieStore){
 	$scope.registerUser=function(){
 		console.log($scope.user)
-		alert('entering register user in controller')
+		
 		UserService.registerUser($scope.user).then(function(response){
 			console.log(response.status)
 			$scope.success="registered successfully...please login again"

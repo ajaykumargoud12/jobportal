@@ -3,8 +3,12 @@
 <link rel="stylesheet" href="css/style.css">
 <style>
 body {
-   background-image: url("images/login.jpg");
-    background-size: cover; 
+  background-image: url("images/login.jpg");
+    background-repeat: no-repeat;
+	opacity:0.8;
+    background-size: 100%; 
+    padding-bottom: 75px;
+	background-attachment: fixed;
 }
 </style>
 
@@ -25,3 +29,4 @@ Enter password <input type="password" ng-model="user.password" placeholder="Ente
 
 </form>
 <span style="color:red">{{loginFail.message}}</span>
+</html>

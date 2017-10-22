@@ -6,7 +6,7 @@ ngApp.controller('ChatCtrl', ['$rootScope' ,'$scope', 'socket', function($rootSc
     $scope.stompClient = socket.stompClient;
     $scope.users=[]
     $scope.$on('sockConnected', function(event, frame) {
-    	alert('sockconnected')
+    	
         $scope.userName=$rootScope.currentUser.username;
         $scope.stompClient.subscribe("/topic/join", function(message) {
         	
