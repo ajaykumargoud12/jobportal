@@ -96,6 +96,7 @@ a.blackText:hover {
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
 	border-color: #ffffff;
+	border: 1px;
 }
 
 .navbar-default .navbar-link {

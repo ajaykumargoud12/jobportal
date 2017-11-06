@@ -16,7 +16,7 @@ ngApp.config(function($routeProvider){
 		controller:'UserController'
 	})
 	.when('/editprofile',{
-		templateUrl:'views/updateprofile.html',
+		templateUrl:'views/updateprofileform.html',
 		controller:'UserController'
 	})
 	.when('/savejob',{
@@ -38,7 +38,7 @@ ngApp.config(function($routeProvider){
 		controller:'BlogPostController'
 	})
 	.when('/getblogpostbyid/:id',{
-		templateUrl:'views/blogpostdetails.html',
+		templateUrl:'views/blogpostdetail.html',
 		controller:'BlogPostDetailController'
 	})
 	.when('/approveblogpost/:id',{

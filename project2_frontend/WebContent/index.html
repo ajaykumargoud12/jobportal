@@ -41,7 +41,7 @@
                 <li><a href="#/home">Home </a></li>
                 
               <li class="dropdown"><a href="" class="dropdown-toggle"
-						data-toggle="dropdown" ng-hide="currentUser.firstname" > Login <b
+						data-toggle="dropdown" ng-hide="currentUser.firstname"> Login <b
 						class="caret"></b></a>
 					<ul class="dropdown-menu">
 							<li><a href="#/login" ng-hide="currentUser.firstname">Sign in</a></li>
@@ -49,13 +49,11 @@
 						</ul></li>
 						
 						
-				              <li><a href="#editprofile" ng-show="currentUser.firstname">Edit Profile</a></li>
-                <li><a href="#/uploadprofilepic" ng-show="currentUser.firstname"><img src="http://localhost:8090/project2_backend/getimage/{{currentUser.username}}" alt="Upload Profile Pic" height="40px" width="40px" ></a></li>
+				              
                 <li><a href="#/savejob" ng-show="currentUser.role=='ADMIN'">Add Job</a></li>
                 <li><a href="#/getalljobs" ng-show="currentUser.firstname">Get All Jobs </a></li>
                 <li class="dropdown"><a href="" class="dropdown-toggle"
-						data-toggle="dropdown" ng-show="currentUser.username"> Blog <b
-							class="caret"></b></a>
+						data-toggle="dropdown" ng-show="currentUser.username"> Blog <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="#/saveblogpost">Add a Blog</a></li>
 							<li><a href="#/getallblogs">Get All Blogs</a></li>
@@ -75,12 +73,16 @@
 						 <li><a href="#/chat" ng-show="currentUser.username">chat </a></li>
 						 <script src="js/sockjs/sockjs.js"></script>
    						 <script src="js/stomp/dist/stomp.js"></script>
- 
-						
-						<li><a href="" ng-show="currentUser.firstname">Welcome {{currentUser.firstname}} {{currentUser.lastname}}</a></li>
+ 						<li><a href="#/uploadprofilepic" ng-show="currentUser.firstname"><img src="http://localhost:8090/project2_backend/getimage/{{currentUser.username}}" alt="Upload Profile Pic" height="30px" width="30px" ></a></li>
+                
+						<li class="dropdown"><a href="" class="dropdown-toggle"
+						data-toggle="dropdown" ng-show="currentUser.username"> {{currentUser.firstname}} {{currentUser.lastname}} <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						<li><a href="#/editprofile" ng-show="currentUser.firstname">Edit Profile</a></li>
                 <li><a href="" ng-click="logout()" ng-show="currentUser.firstname">Logout</a></li>
                 
-               
+               </ul>
+						</li>
                 
                 
                 </ul>

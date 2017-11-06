@@ -15,7 +15,7 @@ ngApp.controller('FriendController',function($scope,$rootScope,FriendService,$lo
 	}
 	function pendingRequests(){
 		FriendService.pendingRequests().then(function(response){
-			$scope.pendingRequests=response.data//List of Friend objects [use only fromId])
+			$scope.pendingRequests=response.data
 		},function(response){
 			if(response.status==401)
 				$location.path('/login')

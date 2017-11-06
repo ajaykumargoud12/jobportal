@@ -5,16 +5,26 @@ body
 {
     background-image: url("images/register.jpg");
     background-repeat: no-repeat;
-	opacity:0.8;
+	opacity:1;
     background-size: 100%; 
     padding-bottom: 75px;
 	background-attachment: fixed;
+	
 }
 </style>
 
 <div class="container">
 <span style="color:red">{{exception.message}}</span>
-<form>
+<div class="form-group">
+				
+				<div class="col-sm-offset-2 col-sm-4">
+				<p class="form-title">
+              <font color="white">
+					
+				</div>
+			</div>
+<form font color="white">
+
 <div class="form-group">
 Enter username 
 <input type="text" placeholder="Enter username" ng-model="user.username" class="form-control" disabled>
@@ -58,5 +68,3 @@ Select Role:
 </div>
 </form>
 </div>
-
- 

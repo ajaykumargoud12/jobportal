@@ -2,7 +2,7 @@
 <style>
 body
 {
-    background-image: url("images/blog.jpg");
+    
     background-repeat: no-repeat;
 	opacity:0.8;
     background-size: 100%; 
@@ -33,5 +33,5 @@ body
 <li ng-repeat="blogComment in blogComments" style="list-style : none">
 <span>{{blogComment.commentText}}</span>
 <span><strong> Commented By</strong> {{blogComment.commentedBy.username}} </span>
-<span><strong> Commented on</strong> {{blogComment.commentedOn | date: 'MM/dd/yyyy' }} </span>
+<span><strong> Commented on</strong> {{blogComment.commentedOn | date:'yyyy/MM/dd'}} </span>
 </li></ul>
