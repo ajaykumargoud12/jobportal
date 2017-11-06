@@ -18,7 +18,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 }
 
 a.blackText {
-	color:#808080;
+	color:blue;
 }
 a.blackText:hover {
 	text-decoration: none;
@@ -35,7 +35,7 @@ a.blackText:hover {
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-	color: #808000;
+	color: yellow;
 }
 
 .navbar-default .navbar-text {
@@ -47,7 +47,7 @@ a.blackText:hover {
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-	color: #808000;
+	color: yellow;
 }
 
 .navbar-default .navbar-nav>li>.dropdown-menu {
@@ -59,7 +59,7 @@ a.blackText:hover {
 }
 
 .navbar-default .navbar-nav>li>.dropdown-menu>li>a:hover, .navbar-default .navbar-nav>li>.dropdown-menu>li>a:focus {
-	color: #808000;
+	color: yellow;
 	background-color: grey;
 }
 
@@ -106,7 +106,7 @@ a.blackText:hover {
 	color: #808000;
 }
 
-@media ( max-width : 767px) {
+@media ( max-width : 700px) {
 	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
 		color: #ffffff;
 	}
